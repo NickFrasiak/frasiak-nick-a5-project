@@ -3,17 +3,36 @@ using System;
 
 public partial class Player : Node2D
 {
-	private float speed = 400;
-	// Called when the node enters the scene tree for the first time.
+	[Export]
+	public float speed = 200;
+	[Export]
+	public float rotationSpeed = 5;
+
+	private Vector2 velocity = Vector2.Zero;
 	public override void _Ready()
 	{
 
 	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		float moveX = Input.GetAxis("left","right" ) * speed * (float)delta;
-		Translate(new Vector2 (moveX,0));
+		//player rotation
+		if (Input.IsActionPressed("right"))
+		{
+            Rotation += rotationSpeed * (float)delta;
+        }
+
+		if (Input.IsActionPressed("left"))
+		{
+            Rotation -= rotationSpeed * (float)delta;
+        }
+
+		//Movement
+		if (Input.IsActionPressed("forward"))
+		{
+			Position += (Transform.X * speed) * (float)delta;
+        }
 	}
+
 }
+
+
