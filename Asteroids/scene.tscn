@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5egfkt1y3q8f"]
+
+[ext_resource type="Script" path="res://Scripts/Player.cs" id="1_lilpj"]
+[ext_resource type="Texture2D" uid="uid://bgigga2gpderk" path="res://Assets/P1.png" id="2_8eoim"]
+
+[node name="Player" type="Node2D"]
+position = Vector2(635, 356)
+rotation = 1.5708
+script = ExtResource("1_lilpj")
+
+[node name="P1" type="Sprite2D" parent="."]
+texture = ExtResource("2_8eoim")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+rotation = 1.5708
+polygon = PackedVector2Array(0, -39, 20, 20, 0, 10, -20, 20)
