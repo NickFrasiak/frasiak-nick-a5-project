@@ -3,10 +3,8 @@ using System;
 
 public partial class Player : Node2D
 {
-    [Export]
-    public float speed = 300;
-    [Export]
-    public float rotationSpeed = 5;
+    [Export] public float speed = 300;
+    [Export] public float rotationSpeed = 5;
 
     private Vector2 velocity = Vector2.Zero;
     public override void _Ready()

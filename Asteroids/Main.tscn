@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://uhr4wqso0h4n"]
+
+[ext_resource type="PackedScene" uid="uid://c5egfkt1y3q8f" path="res://Player.tscn" id="1_luhhf"]
+[ext_resource type="PackedScene" uid="uid://bblwvsbki1uq8" path="res://asteroid.tscn" id="2_a1sia"]
+
+[node name="Main Game" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_luhhf")]
+position = Vector2(653, 339)
+
+[node name="Asteroid" parent="." instance=ExtResource("2_a1sia")]
+position = Vector2(562, 482)

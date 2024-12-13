@@ -6,6 +6,7 @@
 
 [node name="Bullet" type="RigidBody2D"]
 gravity_scale = 0.0
+contact_monitor = true
 
 [node name="BulletSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
