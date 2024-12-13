@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="frasiak-nick-a5-project"
-run/main_scene="res://scene.tscn"
+run/main_scene="res://Player.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -26,7 +26,7 @@ project/assembly_name="frasiak-nick-a5-project"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/2d_shapes/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 

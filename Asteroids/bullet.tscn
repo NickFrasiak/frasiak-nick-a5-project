@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cukv7grynelkt"]
+
+[ext_resource type="Texture2D" uid="uid://0ejp0fty3h2b" path="res://Assets/D2.png" id="1_1ntfv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kpdqq"]
+
+[node name="Bullet" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="BulletSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_1ntfv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.36)
+scale = Vector2(0.093, 0.072)
+shape = SubResource("CapsuleShape2D_kpdqq")
