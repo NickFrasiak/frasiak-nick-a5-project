@@ -31,8 +31,13 @@ public partial class Player : Node2D
         {
             Position += (Transform.X * speed) * (float)delta;
         }
+        else
+        {
+            //If not moving, moves player forward
+            Position += (Transform.X * (speed * 0.5f)) * (float)delta;
+        }
 
-        //var viewport_size = GetViewportRect().Size;
+        //Screen Wrap
         if (Position.X < 0)
         {
             Position = new Vector2(GetViewport().GetVisibleRect().Size.X, Position.Y);
@@ -40,8 +45,6 @@ public partial class Player : Node2D
         else if (Position.X > GetViewport().GetVisibleRect().Size.X)
         {
             Position = new Vector2(0, Position.Y);
-
-
         }
 
         if (Position.Y < 0)
@@ -51,11 +54,8 @@ public partial class Player : Node2D
         else if (Position.Y > GetViewport().GetVisibleRect().Size.Y)
         {
             Position = new Vector2(Position.X, 0);
-
-
         }
     }
-
 }
 
 
