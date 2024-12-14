@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cp6cqsj2dyuxj"]
 
-[ext_resource type="Script" path="res://Asteroid.cs" id="1_3cehb"]
+[ext_resource type="Script" path="res://Scripts/Asteroid.cs" id="1_3cehb"]
 [ext_resource type="Texture2D" uid="uid://dxa2lmhcqf8jk" path="res://Assets/A1.png" id="1_q8yym"]
-[ext_resource type="Script" path="res://Health.cs" id="2_rmg2k"]
+[ext_resource type="Script" path="res://Scripts/Health.cs" id="2_rmg2k"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_24hcj"]
 
@@ -16,7 +16,6 @@ script = ExtResource("2_rmg2k")
 maxHealth = 30.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1, 1)
 texture = ExtResource("1_q8yym")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

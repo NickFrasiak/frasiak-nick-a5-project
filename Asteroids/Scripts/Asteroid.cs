@@ -6,7 +6,7 @@ public partial class Asteroid : CharacterBody2D
 {
     Player player;
 
-	[Export] float damage = 10f;
+	[Export] float damage = 50f;
 	[Export] float attackPerSecond = 2f;
     [Export] float speed = 200f;
 
@@ -36,7 +36,7 @@ public partial class Asteroid : CharacterBody2D
 	}
     public void Attack()
     {
-
+        player.GetNode<Health>("Health").Damage(damage);
     }
 
 	public void AttackRangeBodyEnter (Node2D body)
