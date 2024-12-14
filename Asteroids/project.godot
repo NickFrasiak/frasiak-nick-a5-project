@@ -28,6 +28,10 @@ project/assembly_name="frasiak-nick-a5-project"
 
 enabled=PackedStringArray()
 
+[global_group]
+
+asteroid=""
+
 [input]
 
 left={

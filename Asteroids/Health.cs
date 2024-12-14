@@ -19,5 +19,7 @@ public partial class Health : Node2D
 		{
 			GetParent().QueueFree();
 		}
+
+
 	}
 }

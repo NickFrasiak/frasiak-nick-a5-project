@@ -6,11 +6,11 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_24hcj"]
 
-[node name="Asteroid" type="CharacterBody2D"]
+[node name="Asteroid" type="CharacterBody2D" groups=["Asteroid", "asteroid"]]
 motion_mode = 1
 script = ExtResource("1_3cehb")
 
-[node name="Health" type="Node2D" parent="."]
+[node name="Health" type="Node2D" parent="." groups=["Asteroid", "asteroid"]]
 position = Vector2(-2, -7)
 script = ExtResource("2_rmg2k")
 maxHealth = 30.0

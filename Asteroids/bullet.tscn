@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bl0riam4rjv5t"]
+[gd_scene load_steps=4 format=3 uid="uid://bl0riam4rjv5t"]
 
 [ext_resource type="Texture2D" uid="uid://0ejp0fty3h2b" path="res://Assets/D2.png" id="1_1ntfv"]
+[ext_resource type="Script" path="res://Bullet.cs" id="1_8ccqk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kpdqq"]
 
@@ -8,6 +9,7 @@
 gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 1
+script = ExtResource("1_8ccqk")
 
 [node name="BulletSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
@@ -17,3 +19,5 @@ texture = ExtResource("1_1ntfv")
 position = Vector2(0, 0.36)
 scale = Vector2(0.093, 0.072)
 shape = SubResource("CapsuleShape2D_kpdqq")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
