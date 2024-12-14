@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cukv7grynelkt"]
+[gd_scene load_steps=3 format=3 uid="uid://bl0riam4rjv5t"]
 
 [ext_resource type="Texture2D" uid="uid://0ejp0fty3h2b" path="res://Assets/D2.png" id="1_1ntfv"]
 
@@ -7,6 +7,7 @@
 [node name="Bullet" type="RigidBody2D"]
 gravity_scale = 0.0
 contact_monitor = true
+max_contacts_reported = 1
 
 [node name="BulletSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
